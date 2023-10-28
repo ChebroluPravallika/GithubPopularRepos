@@ -1,0 +1,34 @@
+.stars {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+}
+
+.image {
+  height: 20px;
+}
+
+.para {
+  margin: 0px;
+  padding-left: 10px;
+}
+
+.avatar {
+  height: 180px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px;
+  /* align-items: center; */
+}
+
+.name {
+  color: #e73959;
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  margin: 1px;
+}
