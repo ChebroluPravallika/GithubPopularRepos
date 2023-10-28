@@ -14,6 +14,7 @@ const languageFiltersData = [
 
 class GithubPopularRepos extends Component {
   state = {
+    activeTab: 'ALL',
     repoData: [],
     isLoading: true,
   }
@@ -23,7 +24,7 @@ class GithubPopularRepos extends Component {
   }
 
   changeActiveTab = id => {
-    this.setState({isLoading: true})
+    this.setState({isLoading: true, activeTab: id})
     this.getGitData(id)
   }
 
@@ -69,17 +70,18 @@ class GithubPopularRepos extends Component {
   }
 
   render() {
-    const {isLoading, repoData} = this.state
+    const {activeTab, isLoading, repoData} = this.state
     console.log(isLoading)
     return (
       <div className="title">
-        <h1>Popular</h1>
+        <h1 className="heading">Popular</h1>
         <div className="background">
           {languageFiltersData.map(each => (
             <LanguageFilterItem
               key={each.id}
               id={each.id}
               language={each.language}
+              activeTab={activeTab}
               changeActiveTab={this.changeActiveTab}
             />
           ))}
