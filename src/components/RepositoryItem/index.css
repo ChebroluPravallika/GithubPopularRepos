@@ -14,7 +14,9 @@
 }
 
 .avatar {
-  height: 180px;
+  height: 150px;
+  width: 150px;
+  align-self: center;
 }
 
 .item {
@@ -22,6 +24,12 @@
   flex-direction: column;
   justify-content: center;
   margin: 10px;
+  background-color: #f8f8ff;
+  padding: 10px;
+  border-radius: 10px;
+  height: 400px;
+  width: 300px;
+
   /* align-items: center; */
 }
 
